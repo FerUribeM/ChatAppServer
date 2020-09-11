@@ -13,12 +13,13 @@ bands.addBand(new Band('Rammstein'))
 io.on('connection', client => {
     console.log('Cliente conectado');
 
-    client.emit('active-bands', bands.getBands());
-
     client.on('disconnect', () => { 
         console.log('Cliente desconectado');
      });
 
+     /*
+
+     client.emit('active-bands', bands.getBands());
      
      client.on('message', (payload) => {
         console.log('Mensaje', payload);
@@ -46,4 +47,5 @@ io.on('connection', client => {
          io.emit('active-bands', bands.getBands());
       })
 
+      */
 });
